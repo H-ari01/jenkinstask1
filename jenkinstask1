@@ -1,0 +1,30 @@
+my-ubuntu@myubuntu-Lenovo-B460e:~$ docker images
+REPOSITORY        TAG       IMAGE ID       CREATED       SIZE
+jenkins/jenkins   lts       4e586344183a   2 weeks ago   469MB
+my-ubuntu@myubuntu-Lenovo-B460e:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+my-ubuntu@myubuntu-Lenovo-B460e:~$ docker run -d -p 3000:8080 --name jenkins jenkins/jenkins:lts
+3f8f65a13413fff06e45d98f271022f126b65c0e4e950559f37cebf57acbe897
+
+Refer snap "jenkins startup.png"
+
+my-ubuntu@myubuntu-Lenovo-B460e:~$ docker exec -it jenkins sh
+$ cat var/jenkins_home/secrets/initialAdminPassword
+f486cb91cdb4427c919ef5281ec9398a
+
+Refer snap "unlock jenkins.png"
+Refer snap "plugins installation.png"
+Refer snap "create admin user.png"
+Refer snap "created admin user.png"
+
+Launch jenkins via "http://localhost:3000/"
+Refer snap "Launch jenkins.png"
+Refer snap "jenkins ready.png"
+Refer snap "new job created.png"
+Refer snap "Projected created - setup1.png"
+Refer snap "Projected created - setup2.png"
+Refer snap "create user.png"
+Refer snap "Task1 console output.png"
+
+END
+
